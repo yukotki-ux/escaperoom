@@ -12,7 +12,9 @@ class Room {
     public:
         Room(int x, int y);
         ~Room();
-        void draw()
+        void draw();
+        
+        bool canMove(int x, int y);
 
 };
 

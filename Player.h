@@ -9,6 +9,7 @@ class Player {
         int y;
 
     public:
+        
         bool move(char key, Room * room);
 
 };

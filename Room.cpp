@@ -25,6 +25,10 @@ Room::~Room() {
 
 }
 
+bool Room:: canMove(int x. int y){
+    if(map[y][x] != 'a')
+}
+
 void Room::draw() {
     for(int outerCounter; outerCounter < height; outerCounter++) {
         for(int innnerCounter; innterCounter < width; innterCounter++) {
