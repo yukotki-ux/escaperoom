@@ -9,6 +9,7 @@ Room::Room(int x, int y) {
     this->height = y;
 
     this->map = new char* [y];
+    
 
     for(int outerCounter = 0; outerCounter < y; outerCounter++) {
         this->map[outerCounter] = new char[x];
