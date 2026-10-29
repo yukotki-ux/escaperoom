@@ -3,7 +3,6 @@
 
 class Room {
     private:
-        Player * player;
 
         int width;
         int height;

@@ -1,19 +1,20 @@
+// #include "Player.h"
 #include "Room.h"
 
-Player::~Player(){
+// Player::~Player(){
 
-}
-bool Player::move(char direction, Room * room) {
+// }
+// bool Player::move(char direction, Room * room) {
 
 
 
-    if(direction == 'w') {
-        if(room->canMove(this->x - 1, this->y))
-        return true;
-    )
-    } else if (direction == 'a') {
+//     if(direction == 'w') {
+//         if(room->canMove(this->x - 1, this->y))
+//         return true;
+//     )
+//     } else if (direction == 'a') {
 
-    } else if (direction == 'd') {
+//     } else if (direction == 'd') {
 
-    }
-}
+//     }
+// }
