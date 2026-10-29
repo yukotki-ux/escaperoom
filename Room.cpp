@@ -10,9 +10,9 @@ Room::Room(int x, int y) {
 
     this->map = new char* [y];
 
-    for(int outerCounter; outerCounter < y; outerCounter++) {
+    for(int outerCounter == 0; outerCounter < y; outerCounter++) {
         this->map[outerCounter] = new char[x];
-        for(int innerCounter; innerCounter < x; innerCounter++) {
+        for(int innerCounter == 0; innerCounter < x; innerCounter++) {
             if(outerCounter == 0 || outerCounter == (y-1) || innerCounter == 0 || innerCounter == (x-1)){
             this->map[outerCounter][innerCounter] = '#';
         } else {
