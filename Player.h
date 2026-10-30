@@ -7,10 +7,15 @@ class Player {
     private: 
         int x;
         int y;
+        Room * room;
 
     public:
         
-        bool move(char key, Room * room);
+        Player();
+        ~Player();
+        bool move(char direction, Room * room);
+        int getX;
+        int getY;
 
 };
 

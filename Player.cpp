@@ -1,7 +1,7 @@
-// #include "Player.h"
+#include "Player.h"
 #include "Room.h"
 
-Player::Player(){
+Player::Player() {
     this->x = 3;
     this->y = 3;
 }
@@ -19,9 +19,8 @@ int Player::getY() {
 
 bool Player::move(char direction, Room * room) {
 
-
-
     if(direction == 'w') {
+        //(*room).canMove(this->x,this->y - 1)
         if(room->canMove(this->x, this->y - 1)){
             this->y -= 1;
             return true;
@@ -42,4 +41,5 @@ bool Player::move(char direction, Room * room) {
             return true;
     }
 }
+    return false;
 }

@@ -9,7 +9,7 @@ Room::Room(int x, int y) {
     this->height = y;
 
     this->map = new char* [y];
-    
+
 
     for(int outerCounter = 0; outerCounter < y; outerCounter++) {
         this->map[outerCounter] = new char[x];
@@ -26,14 +26,20 @@ Room::~Room() {
 
 }
 
-// bool Room:: canMove(int x. int y){
-//     if(map[y][x] != 'a')
-// }
+bool Room:: canMove(int x. int y){
+    if(map[y][x] != '#') {
+        return true;
+    } return false;
+}
 
 void Room::draw() {
     for(int outerCounter = 0; outerCounter < height; outerCounter++) {
         for(int innerCounter = 0; innerCounter < width; innerCounter++) {
+            if(this->player->getX() == innerCounter && this->player->getY()) {
+                cout << '@';
+            } else {
             cout << this->map[outerCounter][innerCounter];
+            }
         }
         cout << endl;
 
