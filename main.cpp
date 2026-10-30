@@ -6,14 +6,16 @@ using namespace std;
 
 int main() {
 
-    Player player;
     // it asks the user how big the map should be: a number of rows and a number of columns.
-    char r;
-    char c;
+    int r;
+    int c;
     cout << "Please enter a number of rows:";
     cin >> r;
-    cout << "\nPlease enter a number of columns: " << endl;
+    cout << "\nPlease enter a number of columns: ";
     cin >> c;
+
+    Player player;
+    
     Room room(r,c, &player);
 
     
