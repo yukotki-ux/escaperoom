@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Room::Room(int x, int y) {
+Room::Room(int x, int y, Player * player) {
 
     this->player = player;
     this->width = x;

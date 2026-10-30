@@ -8,13 +8,13 @@ int main() {
 
     Player player;
     // it asks the user how big the map should be: a number of rows and a number of columns.
-    // char r;
-    // char c;
-    // cout << "Please enter a number of rows: " << endl;
-    // cin >> r;
-    // cout << "Please enter a number of columns: " << endl;
-    // cin >> c;
-    Room room(20,10, &player);
+    char r;
+    char c;
+    cout << "Please enter a number of rows:";
+    cin >> r;
+    cout << "\nPlease enter a number of columns: " << endl;
+    cin >> c;
+    Room room(r,c, &player);
 
     
 
