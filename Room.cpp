@@ -1,10 +1,12 @@
 #include "Room.h"
+#include "Player.h"
 #include <iostream>
 
 using namespace std;
 
 Room::Room(int x, int y) {
 
+    this->player = player;
     this->width = x;
     this->height = y;
 
@@ -26,7 +28,7 @@ Room::~Room() {
 
 }
 
-bool Room:: canMove(int x. int y){
+bool Room::canMove(int x, int y){
     if(map[y][x] != '#') {
         return true;
     } return false;
@@ -35,7 +37,7 @@ bool Room:: canMove(int x. int y){
 void Room::draw() {
     for(int outerCounter = 0; outerCounter < height; outerCounter++) {
         for(int innerCounter = 0; innerCounter < width; innerCounter++) {
-            if(this->player->getX() == innerCounter && this->player->getY()) {
+            if(this->player->getX() == innerCounter && this->player->getY() == outerCounter) {
                 cout << '@';
             } else {
             cout << this->map[outerCounter][innerCounter];

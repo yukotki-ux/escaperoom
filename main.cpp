@@ -16,13 +16,16 @@ int main() {
     // cin >> c;
     Room room(20,10, &player);
 
-    room.draw();
+    
 
     bool isRunning = true;
 
     while(isRunning) {
+
+        room.draw();
+
         char input;
-        cout << endl << endl << "Please use the w/a/s/d keys to move or press q to quit:"
+        cout << endl << endl << "Please use the w/a/s/d keys to move or press q to quit:";
         cin >> input;
 
         if(input == 'q') {
@@ -32,8 +35,6 @@ int main() {
         }
     }
 
-
-    cout << "Ending main ..." << endl;
     return 0;
 
 

@@ -14,8 +14,8 @@ class Player {
         Player();
         ~Player();
         bool move(char direction, Room * room);
-        int getX;
-        int getY;
+        int getX();
+        int getY();
 
 };
 
