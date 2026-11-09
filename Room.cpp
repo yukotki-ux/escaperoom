@@ -1,5 +1,6 @@
 #include "Room.h"
 #include "Player.h"
+#include "Item.h"
 #include <iostream>
 
 using namespace std;
@@ -46,5 +47,15 @@ void Room::draw() {
         cout << endl;
 
     }
+
+void Room::placeItem(Item * i, int x, int y) {
+    this->map[y][x] = i->getId();
+}
+
+Item Room::takeItem(int x, int y) {
+    Item newItem = Item(this->map[y][x], Item.getNameFromId(this->map[y][x]));
+    this->map[y][x] = ' ';
+    return newItem;
+}
     
 }

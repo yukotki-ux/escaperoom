@@ -4,7 +4,9 @@
 class Room;
 
 class Player {
-    private: 
+    private:
+        void getItem(Room * p, int x, int y); 
+        Inventory inventory;
         int x;
         int y;
         Room * room;
@@ -16,6 +18,7 @@ class Player {
         bool move(char direction, Room * room);
         int getX();
         int getY();
+        std::string printInventory();
 
 };
 

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Player.h"
 #include "Room.h"
+#include "Item.h"
 
 using namespace std;
 
@@ -18,6 +19,8 @@ int main() {
     
     Room room(r,c, &player);
 
+    Item key('k', "key");
+    room.placeItem(&key, 2, 2);
     
 
     bool isRunning = true;
@@ -25,6 +28,7 @@ int main() {
     while(isRunning) {
 
         room.draw();
+        cout << player->printInventory
 
         char input;
         cout << endl << endl << "Please use the w/a/s/d keys to move or press q to quit:";
