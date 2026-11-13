@@ -28,7 +28,7 @@ int main() {
     while(isRunning) {
 
         room.draw();
-        cout << player->printInventory
+        cout << Player->printInventory
 
         char input;
         cout << endl << endl << "Please use the w/a/s/d keys to move or press q to quit:";
