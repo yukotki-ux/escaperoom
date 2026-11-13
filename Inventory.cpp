@@ -36,11 +36,19 @@ void Inventory::removeItem(std::string id) {
         }
     }
     if(deleted == true) {
-        count -+
+        count -= 1;
     }
     
 }
-bool Inventory::hasItem(std::string id);
+bool Inventory::hasItem(char id) {
+    for(int x; x < count; x++) {
+        if(this->items[count]->getId() == id) {
+            return true;
+        }
+    }
+    return false;
+}
+
 Inventory::Inventory() {
     this->count = 0;
     this->arrayCapacity = 2;
@@ -50,7 +58,9 @@ Inventory::Inventory() {
     for(int x; x < count; x++) {
         if(this->items[count]->getId() == id) {
             delete this->items[x];
-}}
+        }
+    delete[] this->items;
+}
 
 std::string printInventory() {
     for(int x; x < count; x++) {

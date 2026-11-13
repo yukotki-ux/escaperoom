@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "Item.h"
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 

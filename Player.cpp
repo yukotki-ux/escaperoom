@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Room.h"
+#include "Item.h"
 #include "Inventory.h"
 
 Player::Player() {
@@ -47,8 +48,8 @@ bool Player::move(char direction, Room * room) {
 
 void Player::getItem(ROom * p, int x. int y) {
     Item itemFromMap = p->takeItem(x, y);
-    Item * items
-    this->inventory->addItem(...)
+    Item * item = new Item(itemFromMap->getId(), itemFromMap->getName();)
+    this->inventory->addItem(item);
 }
 
 std::string printInventory(){
