@@ -27,7 +27,10 @@ Room::Room(int x, int y, Player * player) {
 
 }
 Room::~Room() {
-
+    for(int outerCounter = 0; outerCounter < height; outerCounter++) {
+        delete this->map[outerCounter];
+    }
+    delete this->map;
 }
 
 bool Room::canMove(int x, int y){
@@ -48,15 +51,17 @@ void Room::draw() {
         cout << endl;
 
     }
+}
 
 void Room::placeItem(Item * i, int x, int y) {
     this->map[y][x] = i->getId();
 }
 
 Item Room::takeItem(int x, int y) {
-    Item newItem = Item(this->map[y][x], Item.getNameFromId(this->map[y][x]));
+    Item newItem(this->map[y][x], Item::getNameFromId(this->map[y][x]));
     this->map[y][x] = ' ';
     return newItem;
 }
-    
+char Room::tileAt(int x, int y) {
+    return this->map[y][x];
 }

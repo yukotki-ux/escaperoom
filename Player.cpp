@@ -46,12 +46,12 @@ bool Player::move(char direction, Room * room) {
     return false;
 }
 
-void Player::getItem(ROom * p, int x. int y) {
-    Item itemFromMap = p->takeItem(x, y);
-    Item * item = new Item(itemFromMap->getId(), itemFromMap->getName();)
-    this->inventory->addItem(item);
+void Player::getItem(Room * r, int x, int y) {
+    Item itemFromMap = r->takeItem(x, y);
+    Item * item = new Item(itemFromMap.getId(), itemFromMap.getName());
+    this->inventory.addItem(item);
 }
 
-std::string printInventory(){
-    
+void Player::printInventory(){
+    return inventory.printInventory();
 }

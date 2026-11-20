@@ -14,12 +14,12 @@ class Inventory {
         Item** items;
 
     public:
-        bool addItem(Item i);
-        void removeItem(std::string id);
-        bool hasItem(std::string id);
+        bool addItem(Item * i);
+        void removeItem(char id);
+        bool hasItem(char id);
         Inventory();
         ~Inventory();
-        std::string printInventory();
+        void printInventory();
 };
 
 #endif

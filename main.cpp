@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include "Player.h"
 #include "Room.h"
 #include "Item.h"
@@ -7,28 +9,45 @@ using namespace std;
 
 int main() {
 
+    srand(time(0));
+
     // it asks the user how big the map should be: a number of rows and a number of columns.
-    int r;
-    int c;
+    int r = 0;
+    int c = 0;
+     while(r < 3 || c < 3) {
     cout << "Please enter a number of rows:";
     cin >> r;
+    if (cin.fail()){
+        cout << "\nPlease enter a valid number";
+        return 1;
+    }
     cout << "\nPlease enter a number of columns: ";
     cin >> c;
-
+    if (cin.fail()){
+        cout << "\nPlease enter a valid number";
+        return 1;
+    }
+    if(r < 3 || c < 3) {
+            cout << "The map needs at least 3 rows and 3 columns." << endl;
+     }
+    }
+    cout << "it's going okay" << endl;
     Player player;
     
-    Room room(r,c, &player);
+    Room room(r, c, &player);
 
     Item key('k', "key");
     room.placeItem(&key, 2, 2);
-    
 
+    Item potion('p', "potion");
+    room.placeItem(&potion, 4, 4);
+    
     bool isRunning = true;
 
     while(isRunning) {
 
         room.draw();
-        cout << Player->printInventory
+        player.printInventory();
 
         char input;
         cout << endl << endl << "Please use the w/a/s/d keys to move or press q to quit:";

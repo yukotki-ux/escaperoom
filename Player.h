@@ -1,3 +1,6 @@
+#include "Inventory.h"
+#include <iostream>
+
 #ifndef PLAYER_H
 #define PLAYER_H
 
@@ -5,7 +8,7 @@ class Room;
 
 class Player {
     private:
-        void getItem(Room * p, int x, int y); 
+        void getItem(Room * r, int x, int y); 
         Inventory inventory;
         int x;
         int y;
@@ -18,7 +21,7 @@ class Player {
         bool move(char direction, Room * room);
         int getX();
         int getY();
-        std::string printInventory();
+        void printInventory();
 
 };
 

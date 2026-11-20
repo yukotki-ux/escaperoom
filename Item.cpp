@@ -1,4 +1,5 @@
-
+#include "Item.h"
+#include <iostream>
 
 Item::Item(char id, std::string name) {
     this->id = id;
@@ -9,11 +10,16 @@ char Item::getId() {
     return this->id;
 }
 
-std::string Item::getName(char id) {
-    if(id == "x") {
+std::string Item::getName() {
+    return this->name;
+}
+
+std::string Item::getNameFromId(char id) {
+    if(id == 'k') {
         return "key";
+    } if(id == 'p') {
+        return "potion";
     } else {
         return "N/A";
     }
-    return this->name;
 }
