@@ -14,24 +14,28 @@ int main() {
     // it asks the user how big the map should be: a number of rows and a number of columns.
     int r = 0;
     int c = 0;
-     while(r < 3 || c < 3) {
+    while(r < 5 || c < 5) {
     cout << "Please enter a number of rows:";
     cin >> r;
-    if (cin.fail()){
-        cout << "\nPlease enter a valid number";
-        return 1;
-    }
+    // if(cin.fail()) {
+    //     cin.clear();
+    //     cin.ignore(1000, '\n');
+    //     cout << "\nPlease enter a valid number." << endl;
+    //     continue;
+    // }
     cout << "\nPlease enter a number of columns: ";
     cin >> c;
-    if (cin.fail()){
-        cout << "\nPlease enter a valid number";
-        return 1;
+    if(cin.fail()) {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "\nPlease enter a valid number.\n" << endl;
+        continue;
     }
-    if(r < 3 || c < 3) {
-            cout << "The map needs at least 3 rows and 3 columns." << endl;
+    if(r < 5 || c < 5) {
+            cout << "The map needs at least 5 rows and 5 columns." << endl;
      }
-    }
-    cout << "it's going okay" << endl;
+     }
+    
     Player player;
     
     Room room(r, c, &player);
