@@ -14,15 +14,15 @@ int main() {
     // it asks the user how big the map should be: a number of rows and a number of columns.
     int r = 0;
     int c = 0;
-    while(r < 5 || c < 5) {
+    while(r < 6 || c < 6) {
     cout << "Please enter a number of rows:";
     cin >> r;
-    // if(cin.fail()) {
-    //     cin.clear();
-    //     cin.ignore(1000, '\n');
-    //     cout << "\nPlease enter a valid number." << endl;
-    //     continue;
-    // }
+    if(cin.fail()) {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "\nPlease enter a valid number." << endl;
+        continue;
+    }
     cout << "\nPlease enter a number of columns: ";
     cin >> c;
     if(cin.fail()) {
@@ -31,8 +31,8 @@ int main() {
         cout << "\nPlease enter a valid number.\n" << endl;
         continue;
     }
-    if(r < 5 || c < 5) {
-            cout << "The map needs at least 5 rows and 5 columns." << endl;
+    if(r < 6 || c < 6) {
+            cout << "The map needs at least 6 rows and 6 columns." << endl;
      }
      }
     
